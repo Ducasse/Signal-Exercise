@@ -1,5 +1,5 @@
 Class {
 	#name : #SgAbstractGate,
 	#superclass : #SgElement,
-	#category : #Signal
+	#category : #'Signal-BeforeProject'
 }

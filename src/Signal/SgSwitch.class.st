@@ -4,13 +4,19 @@ Class {
 	#instVars : [
 		'isOn'
 	],
-	#category : #Signal
+	#category : #'Signal-BeforeProject'
 }
 
 { #category : #accessing }
 SgSwitch >> initialize [
 
 	self on
+]
+
+{ #category : #testing }
+SgSwitch >> isSwitch [ 
+
+	^ true
 ]
 
 { #category : #accessing }
@@ -21,6 +27,11 @@ SgSwitch >> off [
 { #category : #accessing }
 SgSwitch >> on [ 
 	isOn := true
+]
+
+{ #category : #accessing }
+SgSwitch >> prefix [ 
+	^ 'S-'
 ]
 
 { #category : #accessing }

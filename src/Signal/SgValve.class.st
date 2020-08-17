@@ -1,16 +1,16 @@
 Class {
-	#name : #SgNot,
+	#name : #SgValve,
 	#superclass : #SgUnaryGate,
 	#category : #'Signal-BeforeProject'
 }
 
 { #category : #compute }
-SgNot >> computeValue [ 
+SgValve >> computeValue [ 
 
-	^ input status not
+	^ input status
 ]
 
 { #category : #compute }
-SgNot >> prefix [
-	^ 'N-'
+SgValve >> prefix [
+	^ 'V-'
 ]

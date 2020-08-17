@@ -1,7 +1,7 @@
 Class {
 	#name : #SgSwitchTest,
 	#superclass : #TestCase,
-	#category : #Signal
+	#category : #'Signal-BeforeProject'
 }
 
 { #category : #tests }

@@ -5,10 +5,10 @@ Class {
 		'input1',
 		'input2'
 	],
-	#category : #Signal
+	#category : #'Signal-BeforeProject'
 }
 
-{ #category : #'accessing structure variables' }
+{ #category : #compute }
 SgBinaryGate >> computeValue [
 
 	^ false
@@ -44,7 +44,7 @@ SgBinaryGate >> setInput2: aSgSwitch [
 	input2 := aSgSwitch
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #accessing }
 SgBinaryGate >> status [
 	(input1 isNil or: [ input2 isNil])
 			ifTrue: [ SgNotConnected signal ].

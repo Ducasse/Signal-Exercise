@@ -1,17 +1,17 @@
 Class {
 	#name : #SgBinaryGateTest,
 	#superclass : #TestCase,
-	#category : #Signal
+	#category : #'Signal-BeforeProject'
 }
 
 { #category : #tests }
 SgBinaryGateTest >> testAdd [
 
-	self assert: ( SgAdd new 
+	self assert: ( SgAnd new 
 							setInput1: SgSwitch new;
 							setInput2: SgSwitch new;
 							status ).
-	self deny: ( SgAdd new 
+	self deny: ( SgAnd new 
 							setInput1: SgSwitch new off;
 							setInput2: SgSwitch new;
 							status ).

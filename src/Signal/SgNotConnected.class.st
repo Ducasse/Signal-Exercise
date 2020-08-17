@@ -1,5 +1,5 @@
 Class {
 	#name : #SgNotConnected,
 	#superclass : #Exception,
-	#category : #Signal
+	#category : #'Signal-BeforeProject'
 }
