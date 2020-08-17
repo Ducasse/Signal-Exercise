@@ -1,12 +1,17 @@
 "
-What do we need getEtat in Component
+- What do we need getEtat in Element
 
-public class Interrupteur extends Composant {
-
+Why this is not in Element 
+- public class Interrupteur extends Element {
     public String description() {
-
         return this.getId();
     }
+
+- Extensions 
+	Adding null input
+
+- setIn1() what a fuck?
+
 "
 Class {
 	#name : #Questions,

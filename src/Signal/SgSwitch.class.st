@@ -27,3 +27,8 @@ SgSwitch >> on [
 SgSwitch >> status [
 	^ isOn
 ]
+
+{ #category : #accessing }
+SgSwitch >> toggle [ 
+	isOn := isOn not
+]
