@@ -8,9 +8,23 @@ Class {
 }
 
 { #category : #evaluating }
+SgHighSignal >> and: aSignal [
+
+	^ aSignal
+	
+]
+
+{ #category : #evaluating }
 SgHighSignal >> not [
 
 	^ SgLowSignal new
+]
+
+{ #category : #evaluating }
+SgHighSignal >> or: aSignal [
+
+	^ self 
+	
 ]
 
 { #category : #evaluating }
