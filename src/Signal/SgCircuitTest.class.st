@@ -2,14 +2,21 @@ Class {
 	#name : #SgCircuitTest,
 	#superclass : #TestCase,
 	#instVars : [
-		'circuit'
+		'circuit',
+		'int1',
+		'int2',
+		'intSecurity',
+		'or',
+		'not',
+		'and',
+		'valve'
 	],
 	#category : #'Signal-Project'
 }
 
 { #category : #tests }
 SgCircuitTest >> setUp [
-	| int1 int2 intSecurity or and not valve |
+
 	int1 := SgSwitch new idNumber: 1; yourself.
 	int2 := SgSwitch new idNumber: 2; off;  yourself.
 	intSecurity := SgSwitch new idNumber: 3; yourself.
@@ -58,7 +65,10 @@ SgCircuitTest >> testSwitches [
 { #category : #tests }
 SgCircuitTest >> testSwitchesSetting [
 	
-	circuit switchesSetting: { 1 -> 1. 2 -> 0 . 3 -> 1 }.
+	int2 on.
+	"To make sure that the switch will turn off by the settings spec."
+	circuit switchesSetting: { 1 -> 1. 2 -> 0 . 3 -> 1 } asDictionary.
+	
 	self assert: (circuit elementWithId: 1) status value.
 	self deny: (circuit elementWithId: 2) status value.
 	self assert: (circuit elementWithId: 3) status value.

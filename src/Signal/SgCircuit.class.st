@@ -47,6 +47,9 @@ SgCircuit >> switchesSetting: aDictionary [
 	"aDictionary is a specification of the status of the switches.
 	{id -> 0} means that the switch id has a low signal"
 	
-	
+	aDictionary keysAndValuesDo: [ :k :v |
+		v = 1 
+			ifTrue: [ (self elementWithId: k) on ]
+			ifFalse: [  (self elementWithId: k) off ]]
 	
 ]
