@@ -54,3 +54,12 @@ SgCircuitTest >> testSwitches [
 		
 	self assert: circuit switches size equals: 3
 ]
+
+{ #category : #tests }
+SgCircuitTest >> testSwitchesSetting [
+	
+	circuit switchesSetting: { 1 -> 1. 2 -> 0 . 3 -> 1 }.
+	self assert: (circuit elementWithId: 1) status value.
+	self deny: (circuit elementWithId: 2) status value.
+	self assert: (circuit elementWithId: 3) status value.
+]

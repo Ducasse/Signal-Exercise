@@ -8,6 +8,12 @@ Class {
 }
 
 { #category : #accessing }
+SgCircuit >> elementWithId: aNumber [
+
+	^ elements detect: [ :each | each idNumber = aNumber ]
+]
+
+{ #category : #accessing }
 SgCircuit >> elements [
 	^ elements
 ]
@@ -34,4 +40,13 @@ SgCircuit >> initialize [
 SgCircuit >> switches [
 
 	^ elements select: [ :each | each isSwitch]
+]
+
+{ #category : #accessing }
+SgCircuit >> switchesSetting: aDictionary [
+	"aDictionary is a specification of the status of the switches.
+	{id -> 0} means that the switch id has a low signal"
+	
+	
+	
 ]

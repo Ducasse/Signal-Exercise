@@ -13,6 +13,11 @@ SgElement >> id [
 ]
 
 { #category : #accessing }
+SgElement >> idNumber [
+	^ id
+]
+
+{ #category : #accessing }
 SgElement >> idNumber: aNumber [
 	id := aNumber
 ]
