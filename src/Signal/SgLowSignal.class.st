@@ -26,6 +26,11 @@ SgLowSignal >> or: aSignal [
 ]
 
 { #category : #evaluating }
+SgLowSignal >> printString [
+	^ 'low'
+]
+
+{ #category : #evaluating }
 SgLowSignal >> value [
 
 	^ false

@@ -28,6 +28,11 @@ SgHighSignal >> or: aSignal [
 ]
 
 { #category : #evaluating }
+SgHighSignal >> printString [
+	^ 'high'
+]
+
+{ #category : #evaluating }
 SgHighSignal >> value [
 	^ true
 ]

@@ -29,7 +29,19 @@ SgSignalTest >> testHighSignalOr [
 ]
 
 { #category : #tests }
+SgSignalTest >> testHighSignalPrintString [
+
+	self assert: SgHighSignal new printString equals: 'high'
+]
+
+{ #category : #tests }
 SgSignalTest >> testLowSignal [
 
 	self deny: SgLowSignal new value 	
+]
+
+{ #category : #tests }
+SgSignalTest >> testLowSignalPrintString [
+
+	self assert: SgLowSignal new printString equals: 'low'
 ]
